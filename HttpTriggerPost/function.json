@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "post"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "insert",
+      "databaseName": "Assignment4DB",
+      "collectionName": "Assignment4DB_Container",
+      "createIfNotExists": false,
+      "connectionStringSetting": "DBconnection",
+      "direction": "out"
+    }
+  ]
+}

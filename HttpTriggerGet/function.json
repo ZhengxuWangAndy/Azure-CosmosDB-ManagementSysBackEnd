@@ -1,0 +1,28 @@
+{
+  "bindings": [
+    {
+      "authLevel": "function",
+      "type": "httpTrigger",
+      "direction": "in",
+      "name": "req",
+      "methods": [
+        "get"
+      ]
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "res"
+    },
+    {
+      "type": "cosmosDB",
+      "name": "input",
+      "databaseName": "Assignment4DB",
+      "collectionName": "Assignment4DB_Container",
+      "createIfNotExists": false,
+      "connectionStringSetting": "DBconnection",
+      "direction": "in",
+      "sqlQuery": "SELECT * from c where c.ShipmentID = {ShipmentID}"
+    }
+  ]
+}
