@@ -22,7 +22,7 @@
       "createIfNotExists": false,
       "connectionStringSetting": "DBconnection",
       "direction": "in",
-      "sqlQuery": "SELECT * from c where c.ShipmentID = {ShipmentID}"
+      "sqlQuery": "SELECT * from c where c.ShipperID = {ShipperID}"
     }
   ]
 }

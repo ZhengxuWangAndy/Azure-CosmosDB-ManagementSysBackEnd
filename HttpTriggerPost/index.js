@@ -8,6 +8,16 @@ module.exports = async function (context, req) {
         BoxesRcvd: req.body.BoxesRcvd,
         ShipperID: req.body.ShipperID
     };
+    const currentDate = new Date();
+
+    // Convert the current date to a formatted string
+    const formattedDate = currentDate.toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric'
+    });
+    raw.Date = formattedDate
+    
     context.bindings.insert = JSON.stringify(raw);
     context.res = {
         status: 200,
